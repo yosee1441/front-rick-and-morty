@@ -23,7 +23,7 @@ function CardCharacter({
     <Card sx={{ position: 'relative' }}>
       <CardMedia component="img" height="220" image={image} alt={name} />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="p">
+        <Typography gutterBottom variant="h5" component="span">
           {`${name} `}
           <Chip
             label={species === Species.HUMAN ? 'recomendado' : 'no recomendado'}

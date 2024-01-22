@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppThunkDispatch, RootState } from '@/redux/reducers/root.reducer'
 
@@ -59,7 +59,7 @@ function Characters() {
               <Pagination
                 count={characterPaginationPages}
                 page={page}
-                onChange={(event: ChangeEvent<unknown>, value: number) =>
+                onChange={(_, value: number) =>
                   setPage(value)
                 }
               />

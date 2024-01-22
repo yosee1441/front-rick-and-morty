@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { HttpClient } from '@/models/httpClient.model'
+import { env } from '../../env'
 
 class httpClientService implements HttpClient {
   private readonly axiosInstance: AxiosInstance
@@ -8,7 +9,7 @@ class httpClientService implements HttpClient {
   constructor() {
     this.abortController = new AbortController()
     this.axiosInstance = axios.create({
-      baseURL: `${import.meta.env.VITE_API_URL}api/v1`,
+      baseURL: `${env.apiUrl}api/v1`,
     })
   }
 
